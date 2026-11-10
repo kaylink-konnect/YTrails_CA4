@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1">
+<meta name="description"
+  content="YTrails, Banff maps and weather.">
+<meta name="robots" content="index, follow">
+
+<title>YTrails | Explore Nature</title>
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="script.js"></script>
+
+</script>
+</head>
+<body>
+<header class="site-header">
+  <nav aria-label="Main navigation">
+    <strong class="site-header__brand">YTrails</strong>
+    <ul class="nav__list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#trails">Trails</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#weather-section">Weather</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero" aria-labelledby="welcome">
+    <img
+      src="https://images.pexels.com/photos/37347243/pexels-photo-37347243.jpeg"
+      alt="Palm trees at a sandy beach bank">
+    <div class="hero__text">
+      <h1 id="welcome">Explore with YTrails</h1>
+      <p>Simple trails. Beautiful views. Great adventures.</p>
+      <a href="#trails" role="button">Explore Trails</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About YTrails</h2>
+    <p>We help new hikers find simple outdoor adventures.</p>
+  </section>
+
+  <section id="trails">
+    <h2>Featured Trails</h2>
+    <div class="trails">
+      <article class="trails__card">
+        <h3>Forest Walk</h3>
+        <p>An easy nature trail.</p>
+      </article>
+      <article class="trails__card">
+        <h3>Beach Walk</h3>
+        <p>A relaxing scenic walk.</p>
+      </article>
+    </div>
+    <table>
+      <caption>Trail Guide</caption>
+      <thead>
+        <tr><th scope="col">Trail</th><th scope="col">Level</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Forest Walk</td><td>Easy</td></tr>
+        <tr><td>Beach Walk</td><td>Easy</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="map" aria-labelledby="map-title">
+    <h2 id="map-title">Banff Trail Map</h2>
+    <iframe
+      title="Banff National Park Map"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-115.70%2C51.10%2C-115.40%2C51.30&amp;layer=mapnik"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+      sandbox="allow-scripts allow-same-origin">
+    </iframe>
+    <p>
+      <a href="https://www.openstreetmap.org/#map=12/51.15/-115.55">
+        View Larger Map
+      </a>
+    </p>
+  </section>
+
+  <section id="weather-section" aria-labelledby="weather-title">
+    <h2 id="weather-title">Current Weather in Banff</h2>
+    <p id="weather" role="status">Loading weather...</p>
+  </section>
+  
+<section id="video">
+  <h2>Explore Nature Video</h2>
+<iframe
+  class="video-frame"
+  src="https://www.youtube.com/embed/jNQXAC9IVRw"
+  title="YouTube video player"
+  loading="lazy"
+  referrerpolicy="origin"
+  allowfullscreen>
+</iframe>
+  <p>
+    <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw"
+       target="_blank"
+       rel="noopener noreferrer">
+      Watch on YouTube
+    </a>
+  </p>
+</section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Ask us about beginner-friendly trails.</p>
+    <form id="enquiryForm" class="contact__form" novalidate>
+      <fieldset>
+        <legend>Your Enquiry</legend>
+        <label for="name">Name (required)</label>
+        <input id="name" name="name" type="text"
+          autocomplete="name" aria-describedby="nameError" required>
+        <p id="nameError" class="error" aria-live="polite"></p>
+
+        <label for="email">Email (required)</label>
+        <input id="email" name="email" type="email"
+          autocomplete="email" aria-describedby="emailError" required>
+        <p id="emailError" class="error" aria-live="polite"></p>
+
+        <label for="trailLength">Trail Length (required)</label>
+        <select id="trailLength" name="trailLength"
+          aria-describedby="trailError" required>
+          <option value="">Select a trail length</option>
+          <option value="short">Short</option>
+          <option value="medium">Medium</option>
+          <option value="long">Long</option>
+        </select>
+        <p id="trailError" class="error" aria-live="polite"></p>
+
+        <label for="message">Message (required)</label>
+        <textarea id="message" name="message"
+          maxlength="500" aria-describedby="messageError"
+          required></textarea>
+        <p id="messageError" class="error" aria-live="polite"></p>
+        <button type="submit">Send Enquiry</button>
+        <p id="feedback" role="status"></p>
+      </fieldset>
+    </form>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>What should I bring?</summary>
+      <p>Bring water and suitable clothing.</p>
+    </details>
+  </section>
+</main>
+<footer><p>&copy; 2026 YTrails. Explore nature.</p></footer>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root { --primary: #176b80; --space: 1rem; }
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #e8f5e9; color: #17364d; }
+.site-header, main, footer { width: 85%; max-width: 1400px; margin: auto; }
+.site-header__brand { font-size: 2rem; }
+.nav__list a { font-size: 1.3rem; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.nav__list { display: flex; flex-wrap: wrap; gap: 1rem; margin-left: auto; list-style: none; }
+nav a { color: var(--primary); }
+section { margin: 2rem 0; }
+.hero { position: relative; overflow: hidden; border-radius: 12px; }
+.hero img { width: 100%; height: 360px; object-fit: cover; filter: brightness(.45); }
+.hero__text { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; }
+.hero h1, .hero p { color: white; margin: .5rem; }
+.trails { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.trails__card { background: #d5edda; padding: 1rem; border: 1px solid #a5c9ad; border-radius: 8px; }
+#about, #map, #weather-section, #contact, #faq { background: #f0f7ed; padding: 1rem; border-radius: 10px; }
+iframe { width: 100%; height: 350px; border: 0; }
+.contact__form { max-width: 520px; }
+input, select, textarea { background: #f5fcff; }
+.error { color: #a40020; margin-top: 0; }
+#feedback { color: #176b80; font-weight: bold; }
+footer { text-align: center; padding: 1rem; }
+section:not(.hero) h2, section:not(.hero) h3, section:not(.hero) p, label, caption { color: #17364d; }
+.error { color: #a40020 !important; }
+table, th, td { background: white; color: #17364d; }
+@media (min-width: 650px) { .trails { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .hero h1 { font-size: 3rem; } }
